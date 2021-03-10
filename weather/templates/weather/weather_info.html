@@ -1,5 +1,7 @@
 {% extends "account/base.html" %}
 
 {% block body %}
-<h1>Weather</h1>
+	{% for weather_data in weather_table %}
+		{{ weather_data }}
+	{% endfor %}
 {% endblock body %}
