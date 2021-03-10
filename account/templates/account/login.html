@@ -1,0 +1,44 @@
+{% extends "account/base.html" %}
+
+{% block title %}
+	<title>Login</title>
+{% endblock title %}
+
+{% block body %}
+	<form method="POST" class="login-form">
+		{% csrf_token %}
+		<b>
+			<div class="mb-3">
+				<label class="form-label">Username</label>
+				<input type="text" class="form-control" name="username">
+			</div>
+			<div class="mb-3">
+				<label class="form-label">Password</label>
+				<input type="password" class="form-control" name="password">
+			</div>
+		</b>
+		<button type="submit" class="btn btn-primary">Login</button>
+	</form>
+{% endblock body %}
+
+{% block navbarLinks %}
+	<a class="nav-link" href="{% url 'account:register' %}">Register</a>
+{% endblock navbarLinks %}
+
+{% block style %}
+<style>
+	.login-form input {
+		background: transparent;
+	}
+
+	.login-form{
+		width: 320px;
+		height: 420px;
+		top: 50%;
+		left: 20%;
+		position: absolute;
+		transform: translate(-50%,-50%);
+		box-sizing: border-box;
+    }
+</style>
+{% endblock style %}
