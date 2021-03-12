@@ -7,3 +7,7 @@
 3. start server : `python manage.py runserver`
 
 4. Go to `localhost:8000` and register and login yourself to see weather report.
+
+<img src="./.photos/pic1.png">
+<img src="./.photos/pic2.png">
+<img src="./.photos/pic3.png">
